@@ -4,7 +4,7 @@
   "description": "sitepoint redux react todo app tut",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --debug"
   },
   "author": "melissa smith",
   "license": "ISC",
