@@ -14,7 +14,7 @@ export default function (todos=init, action) {
       //iterates over the list
       return todos.map(t => {
         //find the todo which has an id that matches the action id
-        if (t.get('id')) === action.payload) {
+        if (t.get('id') === action.payload) {
           //call update which takes a key and function, returns a new copy of the map with isDone replaced (if was false, now true)
           return t.update('isDone', isDone => !isDone);
         } else {

@@ -1,8 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { TodoList } from './components';
-import { List, Map } from 'immutable';
+import { createStore } from 'redux';
+// makes the containers aware of the store
+import { Provider } from 'react-redux';
 import reducer from './reducer';
+import { TodoList } from './containers';
+import { List, Map } from 'immutable';
 
 const store = createStore(reducer);
 
@@ -30,6 +33,8 @@ const store = createStore(reducer);
 // ]);
 
 render(
-  <TodoList todos={store.getState()} />,
+  <Provider store={store}>
+    <TodoList />
+  </Provider>,
   document.getElementById('app')
 );
