@@ -6,8 +6,6 @@ const init = List([]);
 
 export default function (todos=init, action) {
   switch(action.type) {
-    case 'THIS_THING':
-    case 'THIS_OTHER_THING':
     case 'ADD_TODO':
       return todos.push(Map(action.payload));
     case 'TOGGLE_TODO':

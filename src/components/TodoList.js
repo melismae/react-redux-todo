@@ -1,15 +1,7 @@
 import React from 'react';
+import { Todo } from './Todo';
 
-export function Todo(props) {
-  const { todo } = props;
-  if(todo.isDone) {
-    return <strike>{todo.text}</strike>
-  } else {
-    return <span>{todo.text}</span>
-  }
-}
-
-export function TodoList(props) {
+ export function TodoList(props) {
   const { todos, toggleTodo, addTodo } = props;
   //triggered by the event in the input below
   const onSubmit = (e) => {
@@ -30,7 +22,7 @@ export function TodoList(props) {
   return (
     <div className='todo'>
       <input type='text'
-            placeholder='Add todo'
+            placeholder='Add'
             className='togo_entry'
             onKeyDown={onSubmit} />
       <ul className='todo_list'>

@@ -2,11 +2,11 @@
 // created after writing the action & reducer
 
 import { connect } from 'react-redux';
-import * as components from './components';
-import { addTodo, toggleTodo } from './actions';
+import { TodoList } from './components/TodoList';
+import { addTodo, toggleTodo } from './store/actions/todo.js';
 
 //container for TodoList component
-export const TodoList = connect(
+export const TodoListContainer = connect(
   function mapStateToProps(state) {
     return {
       todos: state
@@ -18,4 +18,4 @@ export const TodoList = connect(
       toggleTodo: id => dispatch(toggleTodo(id))
     }
   }
-)(components.TodoList)
+)(TodoList)
